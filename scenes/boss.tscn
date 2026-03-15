@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://drjkpcmqvl6o0"]
+
+[ext_resource type="Script" uid="uid://buivifk033hsb" path="res://scenes/boss.gd" id="1_neq0i"]
+[ext_resource type="Texture2D" uid="uid://db8p8vgucgt3k" path="res://assets/Sprites/slime_green.png" id="2_jncid"]
+[ext_resource type="PackedScene" uid="uid://dlojpxmgh18kt" path="res://scenes/Gem.tscn" id="2_qnbj4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnbj4"]
+atlas = ExtResource("2_jncid")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3bxh"]
+atlas = ExtResource("2_jncid")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqpjq"]
+atlas = ExtResource("2_jncid")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cdgk"]
+atlas = ExtResource("2_jncid")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsl3t"]
+atlas = ExtResource("2_jncid")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2avx2"]
+atlas = ExtResource("2_jncid")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f346"]
+atlas = ExtResource("2_jncid")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0onds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnbj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3bxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqpjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cdgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsl3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2avx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f346")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfs1x"]
+size = Vector2(20, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8eiau"]
+size = Vector2(9.5, 16)
+
+[node name="Boss" type="CharacterBody2D" unique_id=2141419441]
+script = ExtResource("1_neq0i")
+gem_scene = ExtResource("2_qnbj4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=884730345]
+sprite_frames = SubResource("SpriteFrames_0onds")
+frame_progress = 0.0067285616
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767022865]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lfs1x")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=1729281060]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=553599106]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8eiau")
