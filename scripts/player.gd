@@ -1,25 +1,50 @@
 extends CharacterBody2D
 
+@export var speed = 250
+@export var jump_velocity = -400
+@export var gravity = 1000
+@export var max_jumps = 2
+@export var break_force = 900
 
-const SPEED = 100.0
-const JUMP_VELOCITY = -400.0
+var jumps_left = max_jumps
+var breaking_down = false
 
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
+func _physics_process(delta):
+
+	# Apply gravity
 	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+		velocity.y += gravity * delta
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		jumps_left = max_jumps
+		breaking_down = false
+
+
+	# Horizontal movement
+	var direction = Input.get_axis("move_left", "move_right")
+	velocity.x = direction * speed
+
+
+	# Jump + Double Jump
+	if Input.is_action_just_pressed("jump") and jumps_left > 0:
+		velocity.y = jump_velocity
+		jumps_left -= 1
+
+
+	# Downward roof break attack
+	if Input.is_action_just_pressed("break_down") and not is_on_floor():
+		velocity.y = break_force
+		breaking_down = true
+
 
 	move_and_slide()
+	
+func _on_body_entered(body):
+
+	if breaking_down and body.is_in_group("breakable_roof"):
+		body.break_roof()
+
+
+func _on_roof_detector_body_entered(body: Node2D) -> void:
+	if breaking_down and body.is_in_group("breakable_roof"):
+		body.break_roof() # Replace with function body.

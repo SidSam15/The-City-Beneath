@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://blgpsi0hstrt3"]
+
+[ext_resource type="Script" uid="uid://bkya1d0v2oldk" path="res://scenes/breakable_roof.gd" id="1_eqty5"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_36j3c"]
+size = Vector2(20, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a120p"]
+size = Vector2(20, 4)
+
+[node name="BreakableRoof" type="StaticBody2D" unique_id=417587598 groups=["breakable_roof"]]
+script = ExtResource("1_eqty5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=141380566]
+texture = SubResource("PlaceholderTexture2D_36j3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1188450649]
+shape = SubResource("RectangleShape2D_a120p")

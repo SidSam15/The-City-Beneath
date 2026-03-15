@@ -31,6 +31,9 @@ radius = 18.110771
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
 size = Vector2(27, 34)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(83, 20)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1005503512]
 script = ExtResource("1_g2els")
 
@@ -48,3 +51,11 @@ shape = SubResource("CircleShape2D_sweqy")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1102152408]
 position = Vector2(0.5, -49)
 shape = SubResource("RectangleShape2D_3vyb7")
+
+[node name="RoofDetector" type="Area2D" parent="." unique_id=1987344754]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoofDetector" unique_id=295095105]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_g2els")
+
+[connection signal="body_entered" from="RoofDetector" to="." method="_on_roof_detector_body_entered"]
