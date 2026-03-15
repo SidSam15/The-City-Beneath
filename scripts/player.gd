@@ -14,7 +14,7 @@ var breaking_down = false
 var facing_direction = 1
 
 var can_take_damage = true
-var damage_cooldown = 1.0
+var damage_cooldown = .5
 
 
 func _ready():
@@ -81,7 +81,7 @@ func take_damage(amount):
 	can_take_damage = false
 
 	# knockback
-	velocity.y = -250
+	velocity.y = -200
 
 	if facing_direction == 1:
 		velocity.x = -200
