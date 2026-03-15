@@ -76,11 +76,11 @@ sprite_frames = SubResource("SpriteFrames_0onds")
 frame_progress = 0.0067285616
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767022865]
-position = Vector2(0, 1)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_lfs1x")
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=1729281060]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=553599106]
-position = Vector2(1, 1)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_8eiau")
