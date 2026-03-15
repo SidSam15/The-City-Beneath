@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://drjkpcmqvl6o0" path="res://scenes/boss.tscn" id="3_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://blgpsi0hstrt3" path="res://scenes/breakable_roof.tscn" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://coojiihi03tsg" path="res://assets/Sprites/download (17).png" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dhw8i2vt4g3tm" path="res://scenes/spike.tscn" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("1_lnu2h")
@@ -432,3 +433,6 @@ position = Vector2(0, -14)
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AACw//v/AAAAAA0AAADP//v/AAAVAA0AAADW//v/AAAVAA0AAADv//r/AAAfAAwAAAD+//z/AAAZAA8AAAARAP3/AAANABAAAAAkAPr/AAAIAAwAAAC3//z/AAAZAA8AAACV//r/AAAIAAwAAAB4//r/AAAfAAwAAABY//3/AAANABAAAABN//v/AAAVAA0AAAAz//r/AAAIAAwAAAAY//z/AAAZAA8AAAAA//3/AAANABAAAADo/vr/AAAfAAwAAADR/vr/AAAIAAwAAAC8/vv/AAAVAA0AAACE/v3/AAANABAAAAA=")
 tile_set = SubResource("TileSet_0tnpc")
+
+[node name="Spike" parent="." unique_id=1367889376 instance=ExtResource("8_gee14")]
+position = Vector2(28, -13)

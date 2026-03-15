@@ -7,72 +7,52 @@ extends CharacterBody2D
 @export var break_force = 750
 @export var max_health = 3
 
-var jumps_left = max_jumps
+
+var health
+var jumps_left
 var breaking_down = false
 var facing_direction = 1
+
+var can_take_damage = true
+var damage_cooldown = 1.0
+
+
+func _ready():
+	health = max_health
+	jumps_left = max_jumps
 
 
 func _physics_process(delta):
 
-	# Apply gravity
+	# Gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
 		jumps_left = max_jumps
 		breaking_down = false
 
-
-	# Horizontal movement
+	# Movement
 	var direction = Input.get_axis("move_left", "move_right")
 	velocity.x = direction * speed
 
+	if direction != 0:
+		facing_direction = direction
+		$AnimatedSprite2D.flip_h = facing_direction < 0
 
 	# Jump + Double Jump
 	if Input.is_action_just_pressed("jump") and jumps_left > 0:
 		velocity.y = jump_velocity
 		jumps_left -= 1
 
-
-	# Downward roof break attack
+	# Downward smash
 	if Input.is_action_just_pressed("break_down") and not is_on_floor():
 		velocity.y = break_force
 		breaking_down = true
 
-	if direction != 0:
-		facing_direction = direction
-
-
 	move_and_slide()
-	
-func _on_body_entered(body):
 
-	if breaking_down and body.is_in_group("breakable_roof"):
-		body.break_roof()
-
-
-func _on_roof_detector_body_entered(body: Node2D) -> void:
-	if breaking_down and body.is_in_group("breakable_roof"):
-		body.break_roof() # Replace with function body.
 
 func _input(event):
-	if Input.is_action_just_pressed("attack"):
-		$AttackArea.monitoring = true
-		await get_tree().create_timer(0.2).timeout
-		$AttackArea.monitoring = false
-
-func die():
-	get_tree().reload_current_scene()
-
-var health = 3
-
-func take_damage(amount):
-
-	health -= amount
-
-	if health <= 0:
-		die()
-
-func _input1(event):
 
 	if Input.is_action_just_pressed("attack"):
 
@@ -82,9 +62,43 @@ func _input1(event):
 			$AttackArea.position.x = -20
 
 		$AttackArea.monitoring = true
-
 		await get_tree().create_timer(0.2).timeout
-
 		$AttackArea.monitoring = false
 
-		$Sprite2D.flip_h = facing_direction < 0
+
+func _on_roof_detector_body_entered(body):
+
+	if breaking_down and body.is_in_group("breakable_roof"):
+		body.break_roof()
+
+
+func take_damage(amount):
+
+	if !can_take_damage:
+		return
+
+	health -= amount
+	can_take_damage = false
+
+	# knockback
+	velocity.y = -250
+
+	if facing_direction == 1:
+		velocity.x = -200
+	else:
+		velocity.x = 200
+
+	if health <= 0:
+		die()
+		return   # IMPORTANT: stops the timer from running
+
+	var timer = get_tree().create_timer(damage_cooldown)
+	await timer.timeout
+
+	can_take_damage = true
+
+func die():
+	call_deferred("_reload_scene")
+
+func _reload_scene():
+	get_tree().reload_current_scene()
