@@ -32,7 +32,7 @@ radius = 18.110771
 size = Vector2(27, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(83, 9)
+size = Vector2(83, 14.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 
@@ -57,7 +57,7 @@ shape = SubResource("RectangleShape2D_3vyb7")
 [node name="RoofDetector" type="Area2D" parent="." unique_id=1987344754]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoofDetector" unique_id=295095105]
-position = Vector2(-2.5, -5.5)
+position = Vector2(-4, 1)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=1761416724]

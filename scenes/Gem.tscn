@@ -108,3 +108,5 @@ shape = SubResource("CircleShape2D_xfm3s")
 sprite_frames = SubResource("SpriteFrames_2w12h")
 frame = 2
 frame_progress = 0.9167461
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
