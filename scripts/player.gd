@@ -123,7 +123,9 @@ func take_damage(amount):
 
 
 func die():
+	GameManager.coins = 0
 	call_deferred("_reload_scene")
+
 
 
 func _reload_scene():
