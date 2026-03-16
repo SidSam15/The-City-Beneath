@@ -5,13 +5,21 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuvw3"]
 size = Vector2(32, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxy8s"]
+size = Vector2(32, 8)
+
 [node name="Sprite2D" type="Sprite2D" unique_id=1087521849]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_5sxum")
 region_enabled = true
 region_rect = Rect2(16, 0, 32, 8)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1525271709]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1953477371]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1678424790]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1678424790]
 shape = SubResource("RectangleShape2D_nuvw3")
+
+[node name="SlideArea" type="Area2D" parent="." unique_id=649310754]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlideArea" unique_id=686331515]
+shape = SubResource("RectangleShape2D_kxy8s")
