@@ -191,36 +191,37 @@ sources/0 = SubResource("TileSetAtlasSource_jea0k")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5c6ct"]
 normal = Vector2(0.9999957, 0.0029154394)
-distance = -718.0
+distance = -819.0169
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2ko1l"]
 normal = Vector2(-0.99996823, 0.007967874)
-distance = -715.0092
+distance = -706.03345
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7c0qn"]
 distance = -4.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_girka"]
 normal = Vector2(0, 1)
-distance = -796.0
+distance = -904.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7vb"]
 size = Vector2(460, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c6ct"]
+size = Vector2(26, 18)
 
 [node name="Interior A" type="Node2D" unique_id=946342152]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=257689551]
-scale = Vector2(5, 5)
+scale = Vector2(5.687, 5.687)
 tile_map_data = PackedByteArray("AAD3//b/AAAAAAAAAAD3//f/AAAAAAEAAAD3//j/AAAAAAIAAAD3//n/AAAAAAMAAAD3//r/AAAAAAQAAAD3//v/AAAAAAUAAAD3//z/AAAAAAYAAAD3//3/AAAAAAcAAAD3//7/AAAAAAgAAAD3////AAAAAAkAAAD4//b/AAABAAAAAAD4//f/AAABAAEAAAD4//j/AAABAAIAAAD4//n/AAABAAMAAAD4//r/AAABAAQAAAD4//v/AAABAAUAAAD4//z/AAABAAYAAAD4//3/AAABAAcAAAD4//7/AAABAAgAAAD4////AAABAAkAAAD5//b/AAACAAAAAAD5//f/AAACAAEAAAD5//j/AAACAAIAAAD5//n/AAACAAMAAAD5//r/AAACAAQAAAD5//v/AAACAAUAAAD5//z/AAACAAYAAAD5//3/AAACAAcAAAD5//7/AAACAAgAAAD5////AAACAAkAAAD6//b/AAADAAAAAAD6//f/AAADAAEAAAD6//j/AAADAAIAAAD6//n/AAADAAMAAAD6//r/AAADAAQAAAD6//v/AAADAAUAAAD6//z/AAADAAYAAAD6//3/AAADAAcAAAD6//7/AAADAAgAAAD6////AAADAAkAAAD7//b/AAAEAAAAAAD7//f/AAAEAAEAAAD7//j/AAAEAAIAAAD7//n/AAAEAAMAAAD7//r/AAAEAAQAAAD7//v/AAAEAAUAAAD7//z/AAAEAAYAAAD7//3/AAAEAAcAAAD7//7/AAAEAAgAAAD7////AAAEAAkAAAD8//b/AAAFAAAAAAD8//f/AAAFAAEAAAD8//j/AAAFAAIAAAD8//n/AAAFAAMAAAD8//r/AAAFAAQAAAD8//v/AAAFAAUAAAD8//z/AAAFAAYAAAD8//3/AAAFAAcAAAD8//7/AAAFAAgAAAD8////AAAFAAkAAAD9//b/AAAGAAAAAAD9//f/AAAGAAEAAAD9//j/AAAGAAIAAAD9//n/AAAGAAMAAAD9//r/AAAGAAQAAAD9//v/AAAGAAUAAAD9//z/AAAGAAYAAAD9//3/AAAGAAcAAAD9//7/AAAGAAgAAAD9////AAAGAAkAAAD+//b/AAAHAAAAAAD+//f/AAAHAAEAAAD+//j/AAAHAAIAAAD+//n/AAAHAAMAAAD+//r/AAAHAAQAAAD+//v/AAAHAAUAAAD+//z/AAAHAAYAAAD+//3/AAAHAAcAAAD+//7/AAAHAAgAAAD+////AAAHAAkAAAD///b/AAAIAAAAAAD///f/AAAIAAEAAAD///j/AAAIAAIAAAD///n/AAAIAAMAAAD///r/AAAIAAQAAAD///v/AAAIAAUAAAD///z/AAAIAAYAAAD///3/AAAIAAcAAAD///7/AAAIAAgAAAD/////AAAIAAkAAAAAAPb/AAAJAAAAAAAAAPf/AAAJAAEAAAAAAPj/AAAJAAIAAAAAAPn/AAAJAAMAAAAAAPr/AAAJAAQAAAAAAPv/AAAJAAUAAAAAAPz/AAAJAAYAAAAAAP3/AAAJAAcAAAAAAP7/AAAJAAgAAAAAAP//AAAJAAkAAAABAPb/AAAKAAAAAAABAPf/AAAKAAEAAAABAPj/AAAKAAIAAAABAPn/AAAKAAMAAAABAPr/AAAKAAQAAAABAPv/AAAKAAUAAAABAPz/AAAKAAYAAAABAP3/AAAKAAcAAAABAP7/AAAKAAgAAAABAP//AAAKAAkAAAACAPb/AAALAAAAAAACAPf/AAALAAEAAAACAPj/AAALAAIAAAACAPn/AAALAAMAAAACAPr/AAALAAQAAAACAPv/AAALAAUAAAACAPz/AAALAAYAAAACAP3/AAALAAcAAAACAP7/AAALAAgAAAACAP//AAALAAkAAAADAPb/AAAMAAAAAAADAPf/AAAMAAEAAAADAPj/AAAMAAIAAAADAPn/AAAMAAMAAAADAPr/AAAMAAQAAAADAPv/AAAMAAUAAAADAPz/AAAMAAYAAAADAP3/AAAMAAcAAAADAP7/AAAMAAgAAAADAP//AAAMAAkAAAAEAPb/AAANAAAAAAAEAPf/AAANAAEAAAAEAPj/AAANAAIAAAAEAPn/AAANAAMAAAAEAPr/AAANAAQAAAAEAPv/AAANAAUAAAAEAPz/AAANAAYAAAAEAP3/AAANAAcAAAAEAP7/AAANAAgAAAAEAP//AAANAAkAAAAFAPb/AAAOAAAAAAAFAPf/AAAOAAEAAAAFAPj/AAAOAAIAAAAFAPn/AAAOAAMAAAAFAPr/AAAOAAQAAAAFAPv/AAAOAAUAAAAFAPz/AAAOAAYAAAAFAP3/AAAOAAcAAAAFAP7/AAAOAAgAAAAFAP//AAAOAAkAAAAGAPb/AAAPAAAAAAAGAPf/AAAPAAEAAAAGAPj/AAAPAAIAAAAGAPn/AAAPAAMAAAAGAPr/AAAPAAQAAAAGAPv/AAAPAAUAAAAGAPz/AAAPAAYAAAAGAP3/AAAPAAcAAAAGAP7/AAAPAAgAAAAGAP//AAAPAAkAAAAHAPb/AAAQAAAAAAAHAPf/AAAQAAEAAAAHAPj/AAAQAAIAAAAHAPn/AAAQAAMAAAAHAPr/AAAQAAQAAAAHAPv/AAAQAAUAAAAHAPz/AAAQAAYAAAAHAP3/AAAQAAcAAAAHAP7/AAAQAAgAAAAHAP//AAAQAAkAAAAIAPb/AAARAAAAAAAIAPf/AAARAAEAAAAIAPj/AAARAAIAAAAIAPn/AAARAAMAAAAIAPr/AAARAAQAAAAIAPv/AAARAAUAAAAIAPz/AAARAAYAAAAIAP3/AAARAAcAAAAIAP7/AAARAAgAAAAIAP//AAARAAkAAAA=")
 tile_set = SubResource("TileSet_5c6ct")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1483184562]
-position = Vector2(-722.99994, -803.99994)
+position = Vector2(-826, -913)
 scale = Vector2(5, 5)
 anchor_mode = 0
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.705, 0.705)
 
 [node name="CharacterBody2D" parent="." unique_id=1005503512 instance=ExtResource("2_5c6ct")]
 position = Vector2(305, -552)
@@ -231,17 +232,18 @@ position = Vector2(305, -552)
 shape = SubResource("WorldBoundaryShape2D_5c6ct")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=226734486]
+position = Vector2(101, 0)
 shape = SubResource("WorldBoundaryShape2D_2ko1l")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=956902131]
-position = Vector2(2, -88)
+position = Vector2(3, -96)
 shape = SubResource("WorldBoundaryShape2D_7c0qn")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=1650489964]
 shape = SubResource("WorldBoundaryShape2D_girka")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D" unique_id=976403062]
-position = Vector2(-490, -151)
+position = Vector2(-519, -175)
 shape = SubResource("RectangleShape2D_fi7vb")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D" unique_id=2058201575]
@@ -253,11 +255,11 @@ position = Vector2(-193, -102)
 shape = SubResource("RectangleShape2D_5c6ct")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D" unique_id=1787791716]
-position = Vector2(-252, -166)
+position = Vector2(-277, -183)
 shape = SubResource("RectangleShape2D_5c6ct")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D" unique_id=2061752546]
-position = Vector2(-241, -153)
+position = Vector2(-249, -160)
 shape = SubResource("RectangleShape2D_5c6ct")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D" unique_id=1280182331]
@@ -277,7 +279,7 @@ position = Vector2(-214, -119)
 shape = SubResource("RectangleShape2D_5c6ct")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Area2D" unique_id=1156655789]
-position = Vector2(-247, -161)
+position = Vector2(-267, -173)
 shape = SubResource("RectangleShape2D_5c6ct")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Area2D" unique_id=1903124799]
@@ -285,5 +287,5 @@ position = Vector2(-236, -147)
 shape = SubResource("RectangleShape2D_5c6ct")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D" unique_id=1322827649]
-position = Vector2(-258, -175)
+position = Vector2(-286, -195)
 shape = SubResource("RectangleShape2D_5c6ct")
