@@ -1,16 +1,12 @@
-extends Area2D
-
-@export var house_scene : PackedScene
-
-func _on_body_entered(body):
-
-	if body.is_in_group("player"):
-		get_tree().change_scene_to_packed(house_scene)
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var player = get_tree().get_first_node_in_group("player")
+
+	if player:
+		player.global_position = $PlayerSpawn.global_position # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

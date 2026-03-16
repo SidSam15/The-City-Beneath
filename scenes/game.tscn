@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://blgpsi0hstrt3" path="res://scenes/breakable_roof.tscn" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://coojiihi03tsg" path="res://assets/Sprites/download (17).png" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dhw8i2vt4g3tm" path="res://scenes/spike.tscn" id="8_gee14"]
-[ext_resource type="PackedScene" uid="uid://rc67fyfpy5l3" path="res://scenes/slant.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" path="res://scenes/slant.tscn" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("1_lnu2h")

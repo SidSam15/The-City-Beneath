@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://b6c7phgdy207x"]
 
+[ext_resource type="Script" uid="uid://dak4ou3snpn40" path="res://scenes/house_scene.gd" id="1_5mjha"]
 [ext_resource type="Texture2D" uid="uid://xck1s07c47ou" path="res://assets/Sprites/download (1).jpg" id="1_jea0k"]
-[ext_resource type="PackedScene" uid="uid://4i785tciak1c" path="res://scenes/player.tscn" id="2_5c6ct"]
+[ext_resource type="PackedScene" uid="uid://drjkpcmqvl6o0" path="res://scenes/boss.tscn" id="4_letqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jea0k"]
 texture = ExtResource("1_jea0k")
@@ -190,6 +191,7 @@ texture = ExtResource("1_jea0k")
 sources/0 = SubResource("TileSetAtlasSource_jea0k")
 
 [node name="Interior A" type="Node2D" unique_id=946342152]
+script = ExtResource("1_5mjha")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=257689551]
 scale = Vector2(5, 5)
@@ -202,5 +204,8 @@ scale = Vector2(5, 5)
 anchor_mode = 0
 zoom = Vector2(0.8, 0.8)
 
-[node name="CharacterBody2D" parent="." unique_id=1005503512 instance=ExtResource("2_5c6ct")]
-position = Vector2(305, -552)
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1882530449]
+position = Vector2(-474, -247)
+
+[node name="Boss" parent="." unique_id=2141419441 instance=ExtResource("4_letqr")]
+position = Vector2(469, -153)

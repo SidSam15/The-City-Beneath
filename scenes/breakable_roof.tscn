@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://blgpsi0hstrt3"]
 
 [ext_resource type="Script" uid="uid://bkya1d0v2oldk" path="res://scenes/breakable_roof.gd" id="1_eqty5"]
+[ext_resource type="PackedScene" uid="uid://b6c7phgdy207x" path="res://scenes/house_scene.tscn" id="3_a120p"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_36j3c"]
 size = Vector2(20, 3)
@@ -10,6 +11,7 @@ size = Vector2(20, 4)
 
 [node name="BreakableRoof" type="StaticBody2D" unique_id=417587598 groups=["breakable_roof"]]
 script = ExtResource("1_eqty5")
+house_scene = ExtResource("3_a120p")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=141380566]
 texture = SubResource("PlaceholderTexture2D_36j3c")
