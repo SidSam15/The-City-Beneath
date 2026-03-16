@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bnh8llv1p30br"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_d0jm8"]
+
+[sub_resource type="TileSet" id="TileSet_65j0x"]
+sources/0 = SubResource("TileSetScenesCollectionSource_d0jm8")
+
+[node name="BossHouseScene" type="Node2D" unique_id=503077832]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=594604212]
+tile_set = SubResource("TileSet_65j0x")
