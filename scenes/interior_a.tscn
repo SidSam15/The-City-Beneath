@@ -207,9 +207,7 @@ distance = -796.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi7vb"]
 size = Vector2(460, 68)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_r0u4j"]
-a = Vector2(14, -39)
-b = Vector2(103, 63)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5c6ct"]
 
 [node name="Interior A" type="Node2D" unique_id=946342152]
 
@@ -246,6 +244,46 @@ shape = SubResource("WorldBoundaryShape2D_girka")
 position = Vector2(-490, -151)
 shape = SubResource("RectangleShape2D_fi7vb")
 
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D" unique_id=2058201575]
+position = Vector2(-225, -133)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D" unique_id=454268663]
+position = Vector2(-193, -102)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D" unique_id=1787791716]
+position = Vector2(-252, -166)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D" unique_id=2061752546]
+position = Vector2(-241, -153)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D" unique_id=1280182331]
+position = Vector2(-176, -92)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D" unique_id=1521313339]
+position = Vector2(-220, -126)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Area2D" unique_id=2142200582]
+position = Vector2(-205, -112)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D" unique_id=648163901]
+position = Vector2(-214, -119)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Area2D" unique_id=1156655789]
+position = Vector2(-247, -161)
+shape = SubResource("RectangleShape2D_5c6ct")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Area2D" unique_id=1903124799]
+position = Vector2(-236, -147)
+shape = SubResource("RectangleShape2D_5c6ct")
+
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D" unique_id=1322827649]
-position = Vector2(-276, -147)
-shape = SubResource("SegmentShape2D_r0u4j")
+position = Vector2(-258, -175)
+shape = SubResource("RectangleShape2D_5c6ct")
