@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://drxl87evwjnji" path="res://scenes/coin_label.gd" id="9_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dklm1g0cnyp4c" path="res://assets/Sprites/download (19).png" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bnyk58wf6602c" path="res://assets/Sprites/Screenshot 2026-03-16 000113.png" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://bdrwfxhxkgogw" path="res://scenes/audio_stream_player_2d.tscn" id="11_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("1_lnu2h")
@@ -510,9 +511,6 @@ texture = ExtResource("9_vtaks")
 position = Vector2(193, -199)
 scale = Vector2(2, 2)
 
-[node name="Spike" parent="CharacterBody2D/Camera2D" unique_id=1367889376 instance=ExtResource("8_gee14")]
-position = Vector2(-426, -58.999985)
-
 [node name="CoinLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=817011869]
 offset_left = 206.0
 offset_top = -213.0
@@ -556,9 +554,6 @@ position = Vector2(92, -70)
 
 [node name="Spike5" parent="Spike" unique_id=129632146 instance=ExtResource("8_gee14")]
 position = Vector2(76, -79)
-
-[node name="Spike7" parent="Spike" unique_id=98879505 instance=ExtResource("8_gee14")]
-position = Vector2(37, -37)
 
 [node name="Spike8" parent="Spike" unique_id=984455248 instance=ExtResource("8_gee14")]
 position = Vector2(30, -37)
@@ -814,11 +809,6 @@ position = Vector2(-672.47455, -71.47455)
 rotation = -0.5694373
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Spike54" parent="Spike" unique_id=856478122 instance=ExtResource("8_gee14")]
-position = Vector2(-690.47455, -58.47455)
-rotation = -0.5694373
-scale = Vector2(0.99999994, 0.99999994)
-
 [node name="Spike55" parent="Spike" unique_id=1289414148 instance=ExtResource("8_gee14")]
 position = Vector2(-720, -64)
 
@@ -942,6 +932,10 @@ position = Vector2(-1061, -159)
 [node name="Spike94" parent="Spike" unique_id=1282763796 instance=ExtResource("8_gee14")]
 position = Vector2(-1020, -200)
 
+[node name="Spike7" parent="Spike" unique_id=1367889376 instance=ExtResource("8_gee14")]
+position = Vector2(-322.00003, -52.999985)
+scale = Vector2(0.99999994, 0.99999994)
+
 [node name="Area2D" type="StaticBody2D" parent="." unique_id=380557900]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=145126289]
@@ -980,3 +974,6 @@ position = Vector2(-348, -117)
 
 [node name="Gem3" parent="." unique_id=1985009666 instance=ExtResource("1_p57ef")]
 position = Vector2(-181, -78)
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=1537983402 instance=ExtResource("11_kvpfn")]
+autoplay = true

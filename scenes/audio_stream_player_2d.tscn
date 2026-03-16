@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bdrwfxhxkgogw"]
+
+[ext_resource type="AudioStream" uid="uid://hnfobdjtn4xk" path="res://assets/music/asep_bagus-jump-and-run-game-backround-music-326882.mp3" id="1_1udxr"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=1537983402]
+stream = ExtResource("1_1udxr")
+volume_db = 0.25
