@@ -22,6 +22,9 @@ GameManager="*uid://beqwdetrqfp7i"
 [global_group]
 
 player=""
+heart1=""
+heart2=""
+heart3=""
 
 [input]
 

@@ -2,8 +2,13 @@ extends Node
 
 var gems = 0
 
+
+var coins = 0
+
+
+
 func collect_gem():
-	gems += 1
+	coins += 1
 
 	if gems >= 5:
 		pass
@@ -25,3 +30,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	

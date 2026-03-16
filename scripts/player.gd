@@ -17,6 +17,14 @@ var can_take_damage = true
 var damage_cooldown = 0.5
 
 
+func update_hearts():
+
+	get_tree().get_first_node_in_group("heart1").visible = health >= 1
+	get_tree().get_first_node_in_group("heart2").visible = health >= 2
+	get_tree().get_first_node_in_group("heart3").visible = health >= 3
+
+
+
 func _ready():
 	health = max_health
 	jumps_left = max_jumps
@@ -89,22 +97,16 @@ func _input(event):
 		$AttackArea.monitoring = false
 
 
-func _on_roof_detector_body_entered(body):
-	if breaking_down and body.is_in_group("breakable_roof"):
-		body.break_roof()
-
-
 func take_damage(amount):
-
 	if !can_take_damage:
 		return
 
 	health -= amount
 	can_take_damage = false
+	update_hearts()
 
 	# knockback
 	velocity.y = -200
-
 	if facing_direction == 1:
 		velocity.x = -200
 	else:
@@ -116,8 +118,8 @@ func take_damage(amount):
 
 	var timer = get_tree().create_timer(damage_cooldown)
 	await timer.timeout
-
 	can_take_damage = true
+
 
 
 func die():
