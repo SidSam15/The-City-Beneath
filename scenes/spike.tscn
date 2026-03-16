@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c8cd46yebr6fe" path="res://scenes/spike.gd" id="2_7a7y0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7a7y0"]
-size = Vector2(4.5, 4.5)
+size = Vector2(5, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2mqm"]
 size = Vector2(1, 4)
