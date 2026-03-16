@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://blgpsi0hstrt3" path="res://scenes/breakable_roof.tscn" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://coojiihi03tsg" path="res://assets/Sprites/download (17).png" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dhw8i2vt4g3tm" path="res://scenes/spike.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://rc67fyfpy5l3" path="res://scenes/slant.tscn" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("1_lnu2h")
@@ -620,3 +621,21 @@ shape = SubResource("WorldBoundaryShape2D_0tnpc")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=328181521]
 position = Vector2(-50, 0)
 shape = SubResource("WorldBoundaryShape2D_vtaks")
+
+[node name="Spike2" parent="." unique_id=1160521247 instance=ExtResource("8_gee14")]
+position = Vector2(-84, -148)
+
+[node name="Spike3" parent="." unique_id=185125007 instance=ExtResource("8_gee14")]
+position = Vector2(-108, -148)
+
+[node name="Spike4" parent="." unique_id=2039760373 instance=ExtResource("8_gee14")]
+position = Vector2(-132, -148)
+
+[node name="Sprite2D" parent="." unique_id=1087521849 instance=ExtResource("9_0tnpc")]
+position = Vector2(-320, -53.99999)
+rotation = -0.71437985
+scale = Vector2(1.0008497, 0.5)
+
+[node name="Sprite2D3" parent="." unique_id=1012576886 instance=ExtResource("9_0tnpc")]
+position = Vector2(-341, -74.999985)
+rotation = -0.7203011
