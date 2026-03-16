@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dcjbyipyo62fp"]
 
-[ext_resource type="Texture2D" uid="uid://cux1mx6wn6k31" path="res://assets/Sprites/download (2).jpg" id="1_wo5jl"]
+[ext_resource type="Texture2D" uid="uid://drxjfyjcek55g" path="res://assets/Sprites/download (3).jpg" id="1_wo5jl"]
 
 [node name="Node2D" type="Sprite2D" unique_id=1835985750]
+position = Vector2(27.500015, -18.500006)
+scale = Vector2(1.6021506, 1.629834)
 texture = ExtResource("1_wo5jl")
 
 [node name="Label" type="Label" parent="." unique_id=1051578872]
@@ -10,4 +12,15 @@ offset_left = -123.0
 offset_top = -12.0
 offset_right = 125.0
 offset_bottom = 11.0
-text = "Blud finally escaped the matrix!!"
+text = "You  finally escaped the matrix!"
+
+[node name="Label2" type="Label" parent="." unique_id=387034960]
+offset_left = -42.0
+offset_top = 11.0
+offset_right = 124.0
+offset_bottom = 34.0
+scale = Vector2(0.5, 0.5)
+text = "Welcome to freedom."
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1296126203]
+zoom = Vector2(4, 4)
