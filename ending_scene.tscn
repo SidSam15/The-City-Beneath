@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dcjbyipyo62fp"]
+
+[ext_resource type="Texture2D" uid="uid://cux1mx6wn6k31" path="res://assets/Sprites/download (2).jpg" id="1_wo5jl"]
+
+[node name="Node2D" type="Sprite2D" unique_id=1835985750]
+texture = ExtResource("1_wo5jl")
+
+[node name="Label" type="Label" parent="." unique_id=1051578872]
+offset_left = -123.0
+offset_top = -12.0
+offset_right = 125.0
+offset_bottom = 11.0
+text = "Blud finally escaped the matrix!!"

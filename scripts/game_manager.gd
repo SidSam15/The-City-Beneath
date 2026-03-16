@@ -7,11 +7,12 @@ var coins = 0
 
 
 
+
 func collect_gem():
 	coins += 1
 
-	if gems >= 5:
-		pass
+	if coins >= 10:
+		get_tree().change_scene_to_file("res://ending_scene.tscn")
 var lives = 3
 
 func lose_life():
